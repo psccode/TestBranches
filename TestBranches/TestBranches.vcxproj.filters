@@ -16,6 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
+    <Text Include="__BETA__.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TestBranches.h">
