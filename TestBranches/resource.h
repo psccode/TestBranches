@@ -10,6 +10,7 @@
 #define IDC_CHECK_MASTER                1000
 #define IDC_LABEL                       1001
 #define IDC_BRANCH                      1002
+#define IDC_CHECK_BETA                  1003
 
 // Next default values for new objects
 // 

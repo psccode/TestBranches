@@ -65,6 +65,7 @@ BEGIN_MESSAGE_MAP(CTestBranchesDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_CHECK_MASTER, &CTestBranchesDlg::OnBnClickedCheckMaster)
+	ON_BN_CLICKED(IDC_CHECK_BETA, &CTestBranchesDlg::OnBnClickedCheckBeta)
 END_MESSAGE_MAP()
 
 
@@ -162,4 +163,14 @@ void CTestBranchesDlg::OnBnClickedCheckMaster()
 	CButton * chkBtn = (CButton *)GetDlgItem(IDC_CHECK_MASTER);
 	CStatic * labelBranch = (CStatic *)GetDlgItem(IDC_BRANCH);
 	labelBranch->SetWindowTextW(chkBtn->GetCheck() ? _T("Master") : _T(""));
+}
+
+
+void CTestBranchesDlg::OnBnClickedCheckBeta()
+{
+	// TODO: Add your control notification handler code here
+
+	CButton * chkBtn = (CButton *)GetDlgItem(IDC_CHECK_BETA);
+	CStatic * labelBranch = (CStatic *)GetDlgItem(IDC_BRANCH);
+	labelBranch->SetWindowTextW(chkBtn->GetCheck() ? _T("Beta") : _T(""));
 }
