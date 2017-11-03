@@ -64,7 +64,7 @@ BEGIN_MESSAGE_MAP(CTestBranchesDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
-	ON_BN_CLICKED(IDC_CHECK_MASTER, &CTestBranchesDlg::OnBnClickedCheckMaster)
+	ON_BN_CLICKED(IDC_RADIO_MASTER, &CTestBranchesDlg::OnBnClickedRadioMaster)
 END_MESSAGE_MAP()
 
 
@@ -153,13 +153,10 @@ HCURSOR CTestBranchesDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
-
-
-void CTestBranchesDlg::OnBnClickedCheckMaster()
+void CTestBranchesDlg::OnBnClickedRadioMaster()
 {
 	// TODO: Add your control notification handler code here
-
-	CButton * chkBtn = (CButton *)GetDlgItem(IDC_CHECK_MASTER);
+	CButton * chkBtn = (CButton *)GetDlgItem(IDC_RADIO_MASTER);
 	CStatic * labelBranch = (CStatic *)GetDlgItem(IDC_BRANCH);
 	labelBranch->SetWindowTextW(chkBtn->GetCheck() ? _T("Master") : _T(""));
 }
